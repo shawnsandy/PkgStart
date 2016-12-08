@@ -6,7 +6,7 @@
  * Time: 12:50 PM
  */
 
-namespace :namespace\App;
+namespace :namespace\Providers;
 
 use Illuminate\Support\ServiceProvider ;
 

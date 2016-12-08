@@ -19,7 +19,7 @@ class ServicesProvider extends ServiceProvider
     public function boot()
     {
         if (!$this->app->routesAreCached()) {
-            include __DIR__ . '/App/routes.php';
+            include __DIR__ . '/routes.php';
         }
 
         /**
@@ -41,7 +41,7 @@ class ServicesProvider extends ServiceProvider
         );
 
         if (!$this->app->runningInConsole()) :
-            include_once __DIR__ . '/App/Helpers/helper.php';
+            include_once __DIR__ . '/Helpers/helper.php';
         endif;
 
 

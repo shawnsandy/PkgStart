@@ -3,7 +3,7 @@
  * Deprecated use The /Provider.php in its place
  */
 
-namespace ShawnSandy\PkgStart;
+namespace :namespace;
 
 use Illuminate\Support\ServiceProvider ;
 
