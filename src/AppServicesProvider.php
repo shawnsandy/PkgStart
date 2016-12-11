@@ -9,7 +9,7 @@ use Illuminate\Support\ServiceProvider;
  *
  * @package ShawnSandy\PkgStart
  */
-class ServicesProvider extends ServiceProvider
+class AppServicesProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
