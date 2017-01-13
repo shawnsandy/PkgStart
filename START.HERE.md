@@ -13,12 +13,22 @@ git clone https:/github.com/shawnsandy/PkgStart myapp/packages/Vendor/PackageNam
 
 ```
 
+
+  
+* CD into your new package dir and run `$ php prefill.php` in the command line. Follow the prompts to replace :author_name :author_username :author_website :author_email :vendor :package_name :package_description :psr4_namespace with their correct values package files, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, `/src/**.php` and composer.json files:  Delete the file prefill.php when done.
+
+``` bash 
+
+ php prefill.php
+ 
+```
+
 * Add the package to composer.json `psr-4` namespace
 
 ``` json
 
 "psr-4": {
-            "ShawnSandy\\Jstables\\": "packages/ShawnSandy/Jstables/src",
+            "VendorName\\PackageName\\": "packages/VendorName/PackageName/src",
  },
             
 ```
@@ -27,18 +37,10 @@ git clone https:/github.com/shawnsandy/PkgStart myapp/packages/Vendor/PackageNam
 
 ``` php
 
-Myvendor\MyPackage\ServicesProvider::class,
+VendorName\PackageName\ServicesProvider::class,
 
 ```
 
-  
-* CD into your new package dir and run `$ php prefill.php` in the command line to replace :author_name :author_username :author_website :author_email :vendor :package_name :package_description with their correct values in README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md and composer.json files:  Delete the file prefill.php when done.
-
-``` bash 
-
- php prefill.php
- 
-```
   
 Dump composer autoload
 
@@ -86,26 +88,21 @@ Myvendor\MyPackage\ServicesProvider::class,
 
 ```
   
-  
-* CD into your new package dir and run `$ php prefill.php` in the command line to replace :author_name :author_username :author_website :author_email :vendor :package_name :package_description with their correct values in README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md and composer.json files:  Delete the file prefill.php when done.
+* Follow the instructions on the following steps in the Quickstart section
 
-``` bash 
+    * Add the package to composer.json `psr-4` namespace
 
-php prefill.php
+    * Go to config/app.php and add the package service provider
+    
+    * Dump composer autoload
 
-``` 
-  
-  Dump composer autoload
-  
-``` bash
 
-composer dumpautoload
+__Build something awesome__
 
 ```
 
 Go to `packages\MyVendor\MyPAckage` to and start coding your package, see [Laravel Packager](https://github.com/Jeroen-G/laravel-packager) for more info and options.
 
-__Readme__ delete this readme and replace with `README.START.md`
 
 ## Contributing
 
