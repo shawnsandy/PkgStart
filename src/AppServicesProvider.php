@@ -9,7 +9,7 @@ use Illuminate\Support\ServiceProvider;
  *
  * @package ShawnSandy\PkgStart
  */
-class AppServicesProvider extends ServiceProvider
+class :providerServicesProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
@@ -25,11 +25,21 @@ class AppServicesProvider extends ServiceProvider
         /**
          * Package views
          */
-        $this->loadViewsFrom(__DIR__ . '/resources/views', '__PACKAGE_NAME__');
+        $this->loadViewsFrom(__DIR__ . '/resources/views', ':package_name');
         $this->publishes(
             [
-                __DIR__ . '/resources/views' => resource_path('views/vendor/__PACKAGE_NAME__'),
-            ], 'toastr-alerts'
+                __DIR__ . '/resources/views' => resource_path('views/vendor/:package_name'),
+            ], ':package_name-views'
+        );
+
+        /**
+         * Package assets
+         */
+        $this->publishes(
+            [
+                __DIR__.'./App/resources/assets/js/' => public_path('assets/:package_name/js/'),
+                __DIR__.'./public/assets/' => public_path('assets/')
+            ], ':package_name-assets'
         );
 
         /**
@@ -37,7 +47,7 @@ class AppServicesProvider extends ServiceProvider
          */
         $this->publishes(
             [__DIR__ . '/config/pagekit.php' => config_path('pagekit.php')],
-            'pagekit-config'
+            ':package_name-config'
         );
 
         if (!$this->app->runningInConsole()) :

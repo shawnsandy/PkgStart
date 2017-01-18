@@ -50,6 +50,9 @@ $replacements = [
     ':namespace' => function () use (&$values) {
         return $values['psr4_namespace'];
     },
+    ':provider' => function () use (&$values) {
+        return ucfirst($values['package_name']);
+    },
 ];
 
 function read_from_console($prompt)
@@ -129,7 +132,7 @@ foreach ($files as $f) {
     file_put_contents($f, $contents);
 }
 
-rename(__DIR__ ."/src/AppServicesProvider.php", __DIR__."/src/".ucfirst($values['package_name']."ServicesProvider"));
+rename(__DIR__ ."/src/AppServicesProvider.php", __DIR__."/src/".ucfirst($values['package_name']."ServicesProvider.php"));
 
 echo "Done.\n";
 echo "Now you should remove the file '" . basename(__FILE__) . "'.\n";
