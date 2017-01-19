@@ -45,9 +45,7 @@ Dump composer autoload
 composer dumpautoload
 
 ```
-
-            
-``` php
+          
 
 
 * Go to config/app.php and add the package service provider
