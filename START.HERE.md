@@ -59,25 +59,21 @@ VendorName\PackageName\ServicesProvider::class,
 
 __Build something awesome__
 
-```
-
-Go to `packages\MyVendor\MyPAckage` to and start coding your package, see [Laravel Packager](https://github.com/Jeroen-G/laravel-packager) for more info and options.
-
 
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
 
-## Security
+### Security
 
 If you discover any security related issues, please email shawnsandy04@gmail.com instead of using the issue tracker.
 
-## Credits
+### Credits
 
 - [shawn sandy](http://shawnsandy.com)
 
 
-## License
+### License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
