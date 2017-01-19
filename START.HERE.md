@@ -36,7 +36,7 @@ git clone https:/github.com/shawnsandy/PkgStart packagename
     "YourVendorName\\PackageName\\": "packages/YourVendorName/PackageName/src",
  },
 
- 
+``` 
   
 Dump composer autoload
 
@@ -56,7 +56,6 @@ composer dumpautoload
 VendorName\PackageName\ServicesProvider::class,
 
 ```
-
 
 __Build something awesome__
 
