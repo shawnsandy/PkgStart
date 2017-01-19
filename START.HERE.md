@@ -5,14 +5,18 @@ A simple toolkit to KickStart laravel package development.
 
 ## Quick Start
 
-* Clone the github repo 
+* Open your laravel project folder 
+* Create a directory in your project root to store your packages lets just call it packages. 
+* Lets add the `YourVendorName` directory to the pacakge folder we just creates this will help keep things organised by vendor. Your folder sturcture should look something like this `packages/YourVendorName/` 
+
+
+* `cd` in the Vendor folder and clone the github repo 
 
 ``` bash
 
-git clone https:/github.com/shawnsandy/PkgStart myapp/packages/Vendor/PackageName
+git clone https:/github.com/shawnsandy/PkgStart packagename
 
 ```
-
 
   
 * CD into your new package dir and run `$ php prefill.php` in the command line. Follow the prompts to replace :author_name :author_username :author_website :author_email :vendor :package_name :package_description :psr4_namespace with their correct values package files, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, `/src/**.php` and composer.json files:  Delete the file prefill.php when done.
@@ -28,19 +32,11 @@ git clone https:/github.com/shawnsandy/PkgStart myapp/packages/Vendor/PackageNam
 ``` json
 
 "psr-4": {
-            "VendorName\\PackageName\\": "packages/VendorName/PackageName/src",
+    "App\\": "app/",
+    "YourVendorName\\PackageName\\": "packages/YourVendorName/PackageName/src",
  },
-            
-```
 
-* Go to config/app.php and add the package service provider
-
-``` php
-
-VendorName\PackageName\ServicesProvider::class,
-
-```
-
+ 
   
 Dump composer autoload
 
@@ -50,51 +46,18 @@ composer dumpautoload
 
 ```
 
+            
+``` php
 
-## Install via laravel-packager
 
-Via Composer
+* Go to config/app.php and add the package service provider
 
-``` bash 
-    $ composer require jeroen-g/laravel-packager
-```
-
-Then add the service `jeroen-g/laravel-packager` provider in config/app.php:
-
-``` bash
-    JeroenG\Packager\PackagerServiceProvider::class,
-```
-
-Then run the following php artisan commands
-
-```bash
-
-php artisan packager:get https://github.com/shawnsandy/PkgStart MyVendor MyPackage
-
-```
-
-Got to config/app.php and find and replace (replace MyVendor/MyPackage with those you provided)
 
 ``` php
 
- Myvendor\MyPackage\MyPackageServiceProvider::class,
- 
- ```
- with 
- 
-``` php
-
-Myvendor\MyPackage\ServicesProvider::class,
+VendorName\PackageName\ServicesProvider::class,
 
 ```
-  
-* Follow the instructions on the following steps in the Quickstart section
-
-    * Add the package to composer.json `psr-4` namespace
-
-    * Go to config/app.php and add the package service provider
-    
-    * Dump composer autoload
 
 
 __Build something awesome__
