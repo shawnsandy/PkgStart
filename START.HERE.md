@@ -27,7 +27,8 @@ git clone https:/github.com/shawnsandy/PkgStart packagename
  
 ```
 
-* Add the package to composer.json `psr-4` namespace
+* Add the package to composer.json `psr-4` namespace (code below). Note packages is the folder we created to clone our packages into, replace YourVendorName and PackageName with your respectives names you entered in base prompts.
+
 
 ``` json
 
@@ -39,6 +40,7 @@ git clone https:/github.com/shawnsandy/PkgStart packagename
 ``` 
   
 Dump composer autoload
+
 
 ``` bash
 
@@ -60,7 +62,14 @@ VendorName\PackageName\ServicesProvider::class,
 * Reset the project
 
 ``` bash
+
 rm -rf .git && git init
+
+git a .
+
+git commit -m "Initialized MyPackageName..."
+
+
 ```
 
 __Build something awesome__
