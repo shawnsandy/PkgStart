@@ -57,6 +57,12 @@ VendorName\PackageName\ServicesProvider::class,
 
 ```
 
+* Reset the project
+
+``` bash
+rm -rf .git && git init
+```
+
 __Build something awesome__
 
 
