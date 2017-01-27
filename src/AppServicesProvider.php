@@ -64,10 +64,11 @@ class :providerServicesProvider extends ServiceProvider
      */
     public function register()
     {
-        /***  remove this line to uncomment and setup ****
+       
        $this->mergeConfigFrom(
-            __DIR__ . 'App/config/config.php', '__YOUR_KEY_NAME__'
+            __DIR__ . 'App/config/config.php', ':package_name'
         );
+         /***  remove this line to uncomment and setup ****
         $this->app->bind(
             '__YOUR_FACADE_NAME__', function () {
                 return new YOUR_CLASS_NAME();
