@@ -61,6 +61,7 @@ VendorName\PackageName\ServicesProvider::class,
 
 * Reset the project
 
+
 ``` bash
 
 rm -rf .git && git init
@@ -71,6 +72,7 @@ git commit -m "Initialized MyPackageName..."
 
 
 ```
+
 
 __Build something awesome__
 

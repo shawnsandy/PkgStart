@@ -1,25 +1,23 @@
 {
-    "name": "ShawnSandy/PkgStart",
+    "name": ":vendor/:package_name",
     "type": "library",
-    "description": "Start Kit for laravel packages",
+    "description": ":package_description",
     "keywords": [
-        "ShawnSandy",
-        "PkgStart"
+        ":vendor",
+        ":package_name"
     ],
-    "homepage": "https://github.com/ShawnSandy/PkgStart",
+    "homepage": "https://github.com/:vendor/:package_name",
     "license": "MIT",
     "authors": [
         {
-            "name": "shawn sandy",
-            "email": "shawnsandy04@gmail.com",
-            "homepage": "http://shawnsandy04@gmail.com",
+            "name": ":author_name",
+            "email": ":author_email",
+            "homepage": ":author_website",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "~5.6|~7.0",
-        "illuminate/support": "~5.1",
-        "laravel/cashier": "^7.0"
+        "php" : "~5.6|~7.0"
     },
     "require-dev": {
         "phpunit/phpunit" : "~4.0||~5.0",
@@ -27,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ShawnSandy\\PkgStart\\": "src"
+            ":vendor\\:package_name\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ShawnSandy\\PkgStart\\": "tests"
+            ":vendor\\:package_name\\": "tests"
         }
     },
     "scripts": {
