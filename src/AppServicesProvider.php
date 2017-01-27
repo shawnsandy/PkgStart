@@ -46,7 +46,7 @@ class :providerServicesProvider extends ServiceProvider
          * Package config
          */
         $this->publishes(
-            [__DIR__ . '/config/pagekit.php' => config_path('pagekit.php')],
+            [__DIR__ . '/config/config.php' => config_path(':package_name.php')],
             ':package_name-config'
         );
 
