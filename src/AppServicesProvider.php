@@ -64,9 +64,9 @@ class :providerServicesProvider extends ServiceProvider
      */
     public function register()
     {
-       
+
        $this->mergeConfigFrom(
-            __DIR__ . 'App/config/config.php', ':package_name'
+            __DIR__ . '/config/config.php', ':package_name'
         );
          /***  remove this line to uncomment and setup ****
         $this->app->bind(
