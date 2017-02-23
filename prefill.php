@@ -132,8 +132,17 @@ foreach ($files as $f) {
     file_put_contents($f, $contents);
 }
 
-rename(__DIR__ ."/src/AppServicesProvider.php", __DIR__."/src/".ucfirst($values['package_name']."ServicesProvider.php"));
-}
+$rename_files = [
+  "App.php",
+  "AppFacade.php",
+  "AppServicesProvider.php",
+];
+
+foreach ($rename_files as $file):
+
+rename(__DIR__ ."/src/".$file , __DIR__."/src/".ucfirst($values['package_name']."ServicesProvider.php"));
+
+endforeach;
 
 echo "Done.\n";
 echo "Now you should remove the file '" . basename(__FILE__) . "'.\n";
