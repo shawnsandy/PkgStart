@@ -132,6 +132,7 @@ foreach ($files as $f) {
     file_put_contents($f, $contents);
 }
 
+
 $rename_files = [
   "App.php",
   "AppFacade.php",

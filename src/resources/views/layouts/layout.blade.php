@@ -55,7 +55,7 @@
             </p>
         </div>
         <div class="col-md-12">
-            @include('gitcontent::partials.messages')
+            @include(':package_name::partials.messages')
         </div>
     </div>
 </div>
